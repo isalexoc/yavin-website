@@ -13,6 +13,11 @@ function userScroll() {
   });
 }
 
+function scrollToTop() {
+  document.body.scrillTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 function incrementStats() {
   const counters = document.querySelectorAll(".counter");
 
@@ -39,3 +44,4 @@ function incrementStats() {
 // Event Listeners
 document.addEventListener("DOMContentLoaded", userScroll);
 document.addEventListener("DOMContentLoaded", incrementStats);
+document.querySelector("#to-top").addEventListener("click", scrollToTop);
